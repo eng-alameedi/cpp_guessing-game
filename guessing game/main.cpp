@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
     bool play = true;
     char play_again;
     guest_num = rand_num();
-    while (play == true) {
+    while (play) {
         cout << "Chose a number between 1 - 10: ";
         cin >> player_num;
         move_count+=1;
