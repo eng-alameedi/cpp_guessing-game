@@ -41,8 +41,12 @@ int main(int argc, const char * argv[]) {
     bool play = true;
     guest_num = rand_num();
     while (play) {
-        cout << "Chose a number between 1 - 10: ";
-        cin >> player_num;
+        // do - while loop to ensure player enter number between 1 to 10
+        do {
+            cout << "Chose a number between 1 - 10: ";
+            cin >> player_num;
+            cout << player_num;
+        } while ((player_num < 1) || (player_num > 10));
         move_count+=1;
         if (player_num > guest_num) {
             cout << "Chose lower number\n";
