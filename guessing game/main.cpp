@@ -20,15 +20,18 @@ bool check_play(){
     // checking play status function
     char play_again;
     bool status = false;
-    cout << "Do you want to play again, ([Y]es,[n]o): ";
-    cin >> play_again;
+    //do-while loop to ensure only y, Y, n, N entered by player
+    do {
+        cout << "Do you want to play again, ([Y]es,[n]o): ";
+        cin >> play_again;
+    } while (((play_again != 'y') && (play_again != 'Y')) && ((play_again != 'n') && (play_again != 'N')));
+    
     if (tolower(play_again) == 'y') {
         status = true;
     }
     else if (tolower(play_again) == 'n'){
         status = false;
     }
-    else check_play();
     return status;
 }
 
