@@ -19,7 +19,7 @@ int rand_num(){
 bool check_play(){
     // checking play status function
     char play_again;
-    bool status = false;
+    bool status;
     //do-while loop to ensure only y, Y, n, N entered by player
     do {
         cout << "Do you want to play again, ([Y]es,[n]o): ";
@@ -29,7 +29,7 @@ bool check_play(){
     if (tolower(play_again) == 'y') {
         status = true;
     }
-    else if (tolower(play_again) == 'n'){
+    else {
         status = false;
     }
     return status;
