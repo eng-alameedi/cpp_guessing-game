@@ -19,7 +19,7 @@ int rand_num(){
 bool check_play(){
     // checking play status function
     char play_again;
-    bool status = true;
+    bool status = false;
     cout << "Do you want to play again, ([Y]es,[n]o): ";
     cin >> play_again;
     if (tolower(play_again) == 'y') {
